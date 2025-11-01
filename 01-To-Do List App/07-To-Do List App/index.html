@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+	<head>
+		<!-- ++++++++++++++++++   Adding meta tags  ++++++++++++++++++ -->
+
+		<!-- Set the encoding of the style sheet to Specifies the character encoding for the HTML document -->
+		<meta charset="UTF-8" />
+
+		<!-- Setting the viewport to make your website look good on all devices -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<!-- Setting the viewport to make your website look good on all devices -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Setting a suggest color that browsers should display of the page or of the surrounding user interface. -->
+		<meta name="theme-color" content="#F0DB4F" />
+
+		<!-- defines the document's title that is shown in a browser's title bar or a page's tab -->
+		<title>To-Do List App | 100 JavaScript Projects</title>
+
+		<!-- Short description of the document's subject (limit to 150 characters) -->
+		<!-- This content *may* be used as a part of search engine results. -->
+		<meta name="description" content="Todo App used to practice JS." />
+
+		<!-- Set keywords words relevant to the page's content be used as a part of search engine results -->
+		<meta name="keywords" content="Todo App, JS, practicle js application" />
+
+		<!-- Set the name of the document's author. -->
+		<meta name="author" content="Amr Saad Abdallah" />
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- start-link:: -->
+		<!-- ++++++++++++++++++   Adding  fav-icons  ++++++++++++++++++ -->
+		<link rel="icon" href="assets/images/favicon/favicon.png" />
+		<link
+			rel="apple-touch-icon"
+			href="assets/images/favicon/apple-touch-icon.png"
+		/>
+		<link rel="manifest" href="./assets/images/favicon/manifest.webmanifest" />
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- ++++++++++++    Adding Figtree fonts from google fonts  +++++++++++++ -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- <link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/> -->
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++    Adding custome styles sheet  ++++++++++++++ -->
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+			crossorigin="anonymous"
+		/>
+
+		<!-- <link rel="stylesheet" href="assets/css/reset.css" /> -->
+		<link rel="stylesheet" href="assets/css/styles.css" />
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- ++++++++++++++++++    Adding Author Info  ++++++++++++++++++ -->
+		<!-- Links to information about the author(s) of the document -->
+		<link rel="author" href="author.txt" />
+
+		<!-- Provides information about an author -->
+		<link rel="me" href="mailto:amrsaadabdallah@gmail.com" />
+		<link rel="me" href="sms:+201097756067" />
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<!-- end-link:: -->
+	</head>
+	<!-- start-body:: -->
+	<body
+		dir="ltr"
+		class="min-vh-100 d-flex flex-column"
+		style="font-family: 'Figtree', sans-serif"
+	>
+		<!-- start-Block:: Header-->
+		<header class="bg-warning bg-opacity-75 py-3 text-center">
+			<h1 class="display-2 fw-medium m-0">Todo Web App</h1>
+		</header>
+		<!-- end-Block:: Header -->
+
+		<!-- start-Block:: Main-->
+		<main class="flex-grow-1 bg-body-secondary p-5">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 col-lg-8 col-xxl-6">
+						<h2 class="display-6 text-center mb-4 text-success">
+							Let's typing To-Do tasks for today
+						</h2>
+
+						<form class="mb-4 tasks-form">
+							<div class="input-group input-group-lg">
+								<input
+									name="taskinput"
+									type="text"
+									class="form-control input-task"
+									placeholder="ex: Reading a Book"
+									autofocus
+								/>
+								<button
+									class="btn btn-primary"
+									type="submit"
+									id="button-addon2"
+								>
+									Add Task
+								</button>
+							</div>
+						</form>
+
+						<form class="mb-4 search-form">
+							<div class="input-group input-group-lg">
+								<input
+									type="text"
+									name="searchinput"
+									class="form-control search-task"
+									placeholder="ex: task title"
+									autofocus
+								/>
+								<button
+									class="btn btn-secondary"
+									type="submit"
+									id="button-addon2"
+								>
+									Search
+								</button>
+							</div>
+						</form>
+
+						<ul
+							class="stats-list list-unstyled d-flex justify-content-between small mb-5"
+						>
+							<li
+								class="stats-list bg-dark d-flex rounded-3 border-3 border border-dark shadow-sm overflow-hidden"
+							>
+								<span class="d-block py-1 px-2 text-light">Remaining</span>
+								<span class="bg-white d-block py-1 px-2 remaining-tasks"
+									>0</span
+								>
+							</li>
+							<li
+								class="stats-list bg-dark d-flex rounded-3 border-3 border border-dark shadow-sm overflow-hidden mx-3"
+							>
+								<span class="d-block py-1 px-2 text-light">Completed</span>
+								<span class="bg-white d-block py-1 px-2 completed-tasks"
+									>0</span
+								>
+							</li>
+							<li
+								class="stats-list bg-dark d-flex rounded-3 border-3 border border-dark shadow-sm overflow-hidden"
+							>
+								<span class="d-block py-1 px-2 text-light">Total</span>
+								<span class="bg-white d-block py-1 px-2 total-tasks">0</span>
+							</li>
+						</ul>
+
+						<ul class="tasks-list list-unstyled d-flex flex-column gap-3">
+						</ul>
+
+						<button
+							class="d-none clear-tasks-btn btn btn btn-outline-danger text-uppercase w-100"
+						>
+							clear all tasks
+						</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- end-Block:: Main -->
+
+		<!-- start-Block:: Footer -->
+		<footer class="bg-dark text-light py-3">
+			<p class="mb-0 text-center">
+				<span class="current-year">2025</span> 
+			</p>
+		</footer>
+		<script src="assets/js/main.js"></script>
+	</body>
+	<!-- end-body:: -->
+</html>
