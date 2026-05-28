@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="head">Modals App</h1>
+    <div class="buttons">
+      <button class="buttons__modal" onclick="openModal('modal1')">Modal 1</button>
+      <button class="buttons__modal" onclick="openModal('modal2')">Modal 2</button>
+      <button class="buttons__modal" onclick="openModal('modal3')">Modal 3</button>
+      <button class="buttons__modal" onclick="openModal('modal4')">Modal 4</button>
+    </div>
+    <div class="modals">
+      <div class="overlay" onclick="overlayCloseFunc()"></div>
+      <div class="modal__body" id="modal1">
+        <div class="modal__close-cont" onclick="closeModal('modal1')">
+          <span class="modal__close-btn"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+        <h2 class="modal__header">Modal 1</h2>
+        <p class="modal__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam id hic repellat dolorum sequi dolor excepturi, quod, culpa tenetur quis nemo eum? Ea quidem necessitatibus enim quaerat voluptates recusandae ullam quisquam quasi saepe veritatis, iste impedit ipsam eaque modi illum? Reiciendis maxime perspiciatis ratione consequatur labore, aliquid numquam illo fugit?</p>
+      </div>
+      <div class="modal__body" id="modal2">
+        <div class="modal__close-cont" onclick="closeModal('modal2')">
+          <span class="modal__close-btn"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+        <h2 class="modal__header">Modal 2</h2>
+        <p class="modal__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam id hic repellat dolorum sequi dolor excepturi, quod, culpa tenetur quis nemo eum? Ea quidem necessitatibus enim quaerat voluptates recusandae ullam quisquam quasi saepe veritatis, iste impedit ipsam eaque modi illum? Reiciendis maxime perspiciatis ratione consequatur labore, aliquid numquam illo fugit?</p>
+      </div>
+      <div class="modal__body" id="modal3">
+        <div class="modal__close-cont" onclick="closeModal('modal3')">
+          <span class="modal__close-btn"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+        <h2 class="modal__header">Modal 3</h2>
+        <p class="modal__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam id hic repellat dolorum sequi dolor excepturi, quod, culpa tenetur quis nemo eum? Ea quidem necessitatibus enim quaerat voluptates recusandae ullam quisquam quasi saepe veritatis, iste impedit ipsam eaque modi illum? Reiciendis maxime perspiciatis ratione consequatur labore, aliquid numquam illo fugit?</p>
+      </div>
+      <div class="modal__body" id="modal4">
+        <div class="modal__close-cont" onclick="closeModal('modal4')">
+          <span class="modal__close-btn"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+        <h2 class="modal__header">Modal 4</h2>
+        <p class="modal__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam id hic repellat dolorum sequi dolor excepturi, quod, culpa tenetur quis nemo eum? Ea quidem necessitatibus enim quaerat voluptates recusandae ullam quisquam quasi saepe veritatis, iste impedit ipsam eaque modi illum? Reiciendis maxime perspiciatis ratione consequatur labore, aliquid numquam illo fugit?</p>
+      </div>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
