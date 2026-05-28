@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500&display=swap"
+        rel="stylesheet">
+    <title>Awesome Editor</title>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <main class="editor">
+        <aside class="aside">
+            <ul class="aside-ul">
+                <li class="aside-ul_li"><a href="#">Brightness</a>
+                    <div class="filter_box">
+                        <label for="brightness">Brightness</label>
+                        <h2 class="valueNow">0</h2>
+                        <input type="range" min="1" max="10" id="brightness" value="0">
+                    </div>
+                </li>
+                <li class="aside-ul_li"><a href="#">Contrast</a>
+                    <div class="filter_box">
+                        <label for="contrast">Contrast</label>
+                        <h2 class="valueNow">0</h2>
+                        <input type="range" min="0" max="200" id="contrast" value="100">
+                    </div>
+                </li>
+                <li class="aside-ul_li"><a href="#">Blur</a>
+                    <div class="filter_box">
+                        <label for="blurProp">Blur</label>
+                        <h2 class="valueNow">0</h2>
+                        <input type="range" min="0" max="5" id="blurProp" value="0">
+                    </div>
+                </li>
+                <li class="aside-ul_li"><a href="#">Opacity</a>
+                    <div class="filter_box">
+                        <label for="opacity">Opacity</label>
+                        <h2 class="valueNow">0</h2>
+                        <input type="range" min="1" max="10" id="opacity" value="10">
+                    </div>
+                </li>
+                <li class="aside-ul_li"><a href="#">Sepia</a>
+                    <div class="filter_box">
+                        <label for="sepia">Sepia</label>
+                        <h2 class="valueNow">0</h2>
+                        <input type="range" min="0" max="100" id="sepia" value="0">
+                    </div>
+                </li>
+                <li class="aside-ul_li"><a href="#">Invert</a>
+                    <div class="filter_box">
+                        <label for="invert">Invert</label>
+                        <h2 class="valueNow">0</h2>
+                        <input type="range" min="0" max="100" id="invert" value="0">
+                    </div>
+                </li>
+                <li class="aside-ul_li"><a href="#">Grayscale</a>
+                    <div class="filter_box">
+                        <label for="grayscale">Grayscale</label>
+                        <h2 class="valueNow">0</h2>
+                        <input type="range" min="0" max="100" id="grayscale" value="0">
+                    </div>
+                </li>
+            </ul>
+        </aside>
+        <section class="result">
+            <div>
+                <input type="file" id="file_input" class="file_input" accept="images/*">
+                <label for="file_input" class="upload">Upload</label>
+            </div>
+            <div class="container_img" id="container_img">
+                <img id="chose_img" src="images/ABTF1FAA59BD1319CF2504.jpg">
+            </div>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

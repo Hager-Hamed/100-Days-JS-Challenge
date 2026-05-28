@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #091921;
+  font-family: "Open Sans", sans-serif;
+}
+.clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 400px;
+  height: 150px;
+  background-color: #081820;
+  border-radius: 6px;
+  border: 2px solid #605d5d;
+  padding: 20px;
+  box-shadow: 12px 12px 15px rgba(0, 0, 0, 50%);
+  user-select: none;
+}
+
+.clock .clock-span {
+  background-color: #0b2430;
+  width: calc(25% - 20px);
+  display: block;
+  color: white;
+  height: 7rem;
+  text-align: center;
+  line-height: 7rem;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.clock .clock-span.minutes::before,
+.clock .clock-span.seconds::before {
+  content: ":";
+  position: absolute;
+  left: -15px;
+  color: #495b64;
+}
+@media screen and (max-width: 350px) {
+  .clock {
+    width: 300px;
+    margin: 0 15px;
+    height: 100px;
+  }
+  .clock .clock-span {
+    height: auto;
+    width: auto;
+    line-height: normal;
+    padding: 6px;
+    font-size: 20px;
+  }
+  .clock .clock-span.format {
+    font-size: 19px;
+  }
+}

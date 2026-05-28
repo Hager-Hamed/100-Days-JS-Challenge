@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+	<head>
+		<!-- ++++++++++++++++++   Adding meta tags  ++++++++++++++++++ -->
+
+		<!-- Set the encoding of the style sheet to Specifies the character encoding for the HTML document -->
+		<meta charset="UTF-8" />
+
+		<!-- Setting the viewport to make your website look good on all devices -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<!-- Setting the viewport to make your website look good on all devices -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Setting a suggest color that browsers should display of the page or of the surrounding user interface. -->
+		<meta name="theme-color" content="#F0DB4F" />
+
+		<!-- defines the document's title that is shown in a browser's title bar or a page's tab -->
+		<title>Image Filter App &mdash; CSS Filters</title>
+
+		<!-- Short description of the document's subject (limit to 150 characters) -->
+		<!-- This content *may* be used as a part of search engine results. -->
+		<meta name="description" content="Todo App used to practice JS." />
+
+		<!-- Set keywords words relevant to the page's content be used as a part of search engine results -->
+		<meta
+			name="keywords"
+			content="Image Filter App,  CSS Filters, JS, practicle js application"
+		/>
+
+		<!-- Set the name of the document's author. -->
+		<meta name="author" content="Amr Saad Abdallah" />
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- start-link:: -->
+		<!-- ++++++++++++++++++   Adding  fav-icons  ++++++++++++++++++ -->
+		<link rel="icon" href="assets/images/favicon/favicon.png" />
+		<link
+			rel="apple-touch-icon"
+			href="assets/images/favicon/apple-touch-icon.png"
+		/>
+		<link rel="manifest" href="./assets/images/favicon/manifest.webmanifest" />
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- ++++++++++++    Adding Figtree fonts from google fonts  +++++++++++++ -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++    Adding bootstrap styles sheet  ++++++++++++++ -->
+		<link rel="stylesheet" href="./assets/css/bootstrap.css" />
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- ++++++++++++++++++    Adding Author Info  ++++++++++++++++++ -->
+		<!-- Links to information about the author(s) of the document -->
+		<link rel="author" href="author.txt" />
+
+		<!-- Provides information about an author -->
+		<link rel="me" href="mailto:amrsaadabdallah@gmail.com" />
+		<link rel="me" href="sms:+201097756067" />
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<!-- end-link:: -->
+	</head>
+	<!-- start-body:: -->
+	<body
+		dir="ltr"
+		class="min-vh-100 d-flex flex-column"
+		style="font-family: 'Rubik', sans-serif"
+	>
+		<!-- start-Block:: Header-->
+		<header class="bg-info bg-gradient py-4 text-center">
+			<h1
+				class="display-3 fw-medium fst-italic m-0 border py-1 border-2 shadow"
+			>
+				Image Filter App
+				<!-- with CSS Filters -->
+			</h1>
+		</header>
+		<!-- end-Block:: Header -->
+
+		<!-- start-Block:: Main-->
+		<main
+			class="flex-grow-1 p-5 bg-dark justify-content-center align-items-center"
+		>
+			<div class="container">
+				<div class="row justify-content-center align-items-center gy-5">
+					<div class="col-md-6">
+						<!-- <h2 class="display-6 text-center mb-4 text-success">
+							Let's typing To-Do tasks for today
+						</h2> -->
+
+						<div
+							class="border border-3 border-dark-subtle m-auto shadow-lg bg-white rounded overflow-hidden"
+						>
+							<img
+								class="preview-image img-fluid h-100 w-100 object-fit-cover"
+								src="./assets/images/programmer-workplace.jpg"
+								alt=""
+							/>
+
+							<input
+								class="file-input form-control form-control rounded-0"
+								id="formFileLg"
+								type="file"
+								accept="image/*"
+							/>
+							<!-- accept=".jpg, .jpeg, .png" -->
+						</div>
+					</div>
+
+					<div class="col-md-5 offset-md-1">
+						<form class="text-white filter-form">
+							<div class="mb-5">
+								<label for="inputState" class="form-label h5"
+									>Choose a Filter:</label
+								>
+								<select
+									id="inputState"
+									class="filter-select form-select form-select-lg mb-3 text-capitalize"
+								>
+									<option selected value="none">none</option>
+									<option value="brightness">brightness</option>
+									<option value="blur">blur</option>
+									<option value="contrast">contrast</option>
+									<option value="opacity">opacity</option>
+									<option value="saturate">saturate</option>
+									<option value="grayscale">grayscale</option>
+									<option value="invert">invert</option>
+								</select>
+							</div>
+
+							<div class="mb-2 filter__adjust d-none">
+								<label for="customRange2" class="form-label h5"
+									>Adjust Filter Strength:
+								</label>
+								<div class="p-3">
+									<div class="d-flex justify-content-between text-capitalize">
+										<p>min: <span class="filter__min-value">0%</span></p>
+										<p>max: <span class="filter__max-value">100%</span></p>
+									</div>
+									<input
+										type="range"
+										class="filter__range form-range"
+										min="0"
+										max="200"
+										id="customRange2"
+									/>
+									<p
+										class="text-center filter__current-value text-warning fw-bold"
+									>
+										50%
+									</p>
+								</div>
+							</div>
+
+							<!-- <a href="./assets/images/main.svg" download="dsd.svg">
+								<img src="./assets/images/main.svg" alt="" />
+							</a> -->
+
+							<!-- <button
+								type="submit"
+								class="w-100 btn btn-lg btn-success bg-gradient text-capitalize"
+							>
+								Apply filter
+							</button> -->
+						</form>
+
+						<!-- <button
+							class="btn-dl w-100 btn btn-lg btn-success bg-gradient text-capitalize"
+						>
+							Download Image
+						</button> -->
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- end-Block:: Main -->
+
+		<p <!-- start-Block:: Footer --></p>
+		<footer class="bg-info py-3">
+			<p class="mb-0 text-center">
+				<span class="current-year">2021</span> ©
+				<a
+					class="text-reset"
+					href="https://amrsaadabdallah.github.io"
+					target="_blank"
+					>AMR SAAD ABDALLAH</a
+				>
+			</p>
+		</footer>
+		<!-- end-Block::Footer -->
+
+		<!-- start-script:: -->
+		<script src="./assets/js/main.js"></script>
+		<!-- end-script:: -->
+	</body>
+	<!-- end-body:: -->
+</html>

@@ -1,0 +1,35 @@
+body {
+    background-image: linear-gradient(to right , #780206 ,#061161) ;
+}
+section {
+    background-image:  linear-gradient(to right ,#061161 , #780206);
+}
+button {
+    background: #061161;
+}
+::placeholder {
+    color: #061161;
+}
+button,
+input {
+    color: #061161;
+    border: 1px solid #061161;
+    outline: none;
+    font-size: 14px;
+}
+.youe-age {
+    display: none;
+}
+.active {
+    display: block;
+    animation-name: apear;
+    animation-duration: 2s;
+}
+@keyframes apear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Age Calculator</title>
+</head>
+<body class="d-flex justify-content-center align-items-center" style="height:100vh;">
+    <section class="rounded w-50 text-white">
+        <div class="container p-3">
+            <header class="header text-center pt-4">
+                <h3 class="fw-bold">Calc Your Age Now</h3>
+                <p class="d-block text-center p-4 fw-bold">Type Your AGE</p>
+            </header>
+            <form action="" class="row px-3 pb-3" >
+                <input type="text" id="year" class="col-10 offset-1  offset-md-1 col-md-2 rounded p-2 mb-1  text-center" placeholder="Year" maxlength="4">
+                <input type="text" id="day" class="  col-10 offset-1   offset-md-2  col-md-2 rounded p-2 mb-1  text-center" placeholder="Day" maxlength="2">
+                <input type="text" id="month" class=" col-10 offset-1   offset-md-2 col-md-2 rounded p-2 mb-1  text-center" placeholder="Month" maxlength="2">
+            </form>
+            <div class="outbut-cotainer d-flex flex-column align-items-center">
+                <button id="calc-age" class="w-50 my-2 py-2 rounded text-white">Calc Your Age....!</button>
+                <div id="your-date" class="my-2 py-2 fs-6"></div>
+                <div id="youe-age" class="youe-age text-center w-75 text-black">
+                    <p class="bg-white rounded p-1" id="year-outbut"></p>
+                    <p class="bg-white rounded p-1" id="month-outbut"></p>
+                    <p class="bg-white rounded p-1" id="week-outbut"></p>
+                    <p class="bg-white rounded p-1" id="day-outbut"></p>
+                    <p class="bg-white rounded p-1" id="hour-outbut"></p>
+                    <p class="bg-white rounded p-1" id="min-outbut"></p>
+                    <p class="bg-white rounded p-1" id="second-outbut"></p>
+                    <p class="bg-white rounded p-1"id="ms-outbut"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bones.js"></script>
+</body>
+</html>
