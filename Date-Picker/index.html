@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date Picker</title>
+    <link rel="icon" href="th.jpg" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="container">
+        <div class="curr-picked">
+          <div class="curr-picked__text"></div>
+          <!-- <div class="curr-picked__text">04/08/2023</div> -->
+        </div>
+        <div class="datepicker">
+          <div class="datepicker__year">
+            <span class="datepicker__btn" id="datepicker__year-prev">
+              <i class="fa-solid fa-chevron-left"></i>
+            </span>
+
+            <span class="datepicker__year-text"></span>
+            <!-- <span class="datepicker__year-text">2023</span> -->
+
+            <span class="datepicker__btn" id="datepicker__year-next">
+              <i class="fa-solid fa-chevron-right"></i>
+            </span>
+          </div>
+          <div class="datepicker__month">
+            <span class="datepicker__btn" id="datepicker__month-prev">
+              <i class="fa-solid fa-chevron-left"></i>
+            </span>
+
+            <span class="datepicker__month-text"> August </span>
+
+            <span class="datepicker__btn" id="datepicker__month-next">
+              <i class="fa-solid fa-chevron-right"></i>
+            </span>
+          </div>
+          <ul class="datepicker__days"></ul>
+          <!--           
+          <ul class="datepicker__days">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li class="active">4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+            <li>30</li>
+            <li>31</li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+
+    <script src="jquery-3.7.0.js"></script>
+    <script src="opp.js"></script>
+
+    <!-- <script src="app.js"></script> -->
+  </body>
+</html>
