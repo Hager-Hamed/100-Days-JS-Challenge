@@ -1,0 +1,28 @@
+/*start style element*/
+body {
+  font-family: Rubik, sans-serif;
+  /* background-color: #d6d2c4; */
+  background: #c2e59c;
+  background: -webkit-linear-gradient(to left, #64b3f4, #c2e59c);
+  background: linear-gradient(to left, #64b3f4, #c2e59c);
+}
+
+footer {
+  color: #f1e9e5;
+}
+/*end*/
+
+/*start custom classes*/
+.main-title {
+  color: #64b3f4;
+}
+
+.fit-content {
+  width: fit-content;
+}
+/*end*/
+
+.clock {
+  width: 65px;
+  text-align: center;
+}

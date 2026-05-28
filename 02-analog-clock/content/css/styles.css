@@ -1,0 +1,88 @@
+:root {
+	--main-color: #262626;
+	/* --main-color: #eee; */
+}
+/*start style element*/
+body {
+	font-family: Rubik, sans-serif;
+	/* background-color: #d6d2c4; */
+	background: #efefbb; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#d4d3dd,
+		#efefbb
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#d4d3dd,
+		#efefbb
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+footer {
+	color: #f1e9e5;
+}
+/*end*/
+
+/*start custom Clssess */
+.main-title {
+	color: #5d534a;
+}
+.fit-content {
+	width: fit-content;
+}
+/*start end*/
+
+/*start style Analoge Clock */
+/* clock container */
+.clock {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid var(--main-color);
+}
+
+/* clock dot */
+.dot {
+	background-color: var(--main-color);
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+
+/* clock handles, common attributes */
+.hour,
+.min,
+.sec {
+	position: absolute;
+	background-color: var(--main-color);
+	transform-origin: 50% 100%;
+	border-radius: 2px;
+	/* transition: all 0.6s linear; */
+}
+
+/* hour handle position and size */
+.hour {
+	width: 5px;
+	height: 35%;
+	top: 15%;
+}
+
+/* minute handle position and size */
+.min {
+	width: 3px;
+	height: 40%;
+	top: 10%;
+}
+
+/* second handle position and size */
+.sec {
+	width: 1px;
+	height: 45%;
+	top: 5%;
+}
+/*end*/

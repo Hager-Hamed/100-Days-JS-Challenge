@@ -1,0 +1,250 @@
+/* https://www.w3schools.com/howto/howto_css_switch.asp */
+
+/* :root {
+	--danger-color: pink;
+} */
+
+/* html {
+	--danger-color: gold;
+} */
+
+/* .sec {
+	--danger-color: red;
+	background-color: lightblue;
+	height: 200px;
+}
+
+h2 {
+	background-color: var(--danger-color, green);
+} */
+
+
+:root {
+	--c-primary: rgb(18, 114, 204);
+	--c-secondary: #ff2d2d;
+
+	--c-title: rgb(35, 39, 47);
+	--c-text: rgb(64, 71, 86);
+	--bg-text: rgb(246, 247, 249);
+
+	--bg: rgb(255, 255, 255);
+
+	--box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme='dark'] {
+	--c-primary: rgb(162, 210, 225);
+	--c-secondary: rgb(255, 92, 92);
+
+	--c-title: rgb(246, 247, 249);
+	--c-text: rgb(235, 236, 240);
+	--bg-text: rgb(52, 58, 70);
+
+	--bg: rgb(35, 39, 47);
+}
+
+/*
+[data-target='heading'] {
+	background-color: red;
+}
+
+[href='#'] {
+	color: red;
+} */
+
+html {
+	height: 100%;
+	/* this defines what 1rem is 10px in xl & xxl media */
+	font-size: 62.5%; /* 1rem = 10px -->  10/16 *100% = 62.5% */
+}
+
+body {
+	font-size: 1.6rem;
+	line-height: 1.6;
+	min-height: 100%;
+	font-family: Inter, sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	color: var(--c-text);
+	background-color: var(--bg);
+}
+
+.container {
+	margin: 0 2vw;
+}
+
+.main-header {
+	padding: 1rem 2vw;
+	box-shadow: 0 0 2px 1px var(--c-text);
+	background-color: var(--bg-text);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.main-header__title {
+	color: var(--title-c);
+	display: flex;
+	align-items: center;
+}
+
+.react-logo {
+	width: 2.5rem;
+	height: 2.5rem;
+	color: var(--c-primary);
+}
+
+.react-logo--lg {
+	width: 12rem;
+	height: 12rem;
+	color: var(--c-primary);
+}
+
+main {
+	padding: 50px 0;
+	margin-bottom: auto;
+}
+
+.sec-hero {
+	text-align: center;
+}
+
+.main-heading {
+	font-size: 3rem;
+	color: var(--title-c);
+	margin-bottom: 1rem;
+}
+
+.text {
+	padding-bottom: 2rem;
+}
+
+.features {
+	text-align: left;
+	margin-top: 3rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+.feature {
+	background-color: var(--bg-text);
+	box-shadow: var(--box-shadow);
+	border: 1px solid var(--c-text);
+	padding: 1.6rem;
+	border-radius: 1rem;
+}
+
+.feature__title {
+	font-size: 2rem;
+	margin: 0.6rem 0 1rem;
+	color: var(--c-secondary);
+}
+
+.feature__text {
+	margin-bottom: 1rem;
+}
+
+/*start-style:: Switch */
+.theme {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.theme__text {
+	text-transform: capitalize;
+}
+
+/* The theme__switch - the box around the slider */
+.theme__switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.theme__switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--bg-text);
+	/* background-color: #ccc; */
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+	border: 2px solid var(--c-text);
+}
+
+.slider:before {
+	position: absolute;
+	content: '';
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 2px;
+	background-color: var(--c-text);
+	/* background-color: white; */
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: var(--c-secondary);
+	/* background-color: #2196f3; */
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px var(--c-secondary);
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+/*end-style:: Switch */
+
+/*start-style:: Footer */
+.main-footer {
+	background-color: var(--bg-text);
+	color: var(--c-text);
+	border-top: 1px solid var(--c-text);
+	text-align: center;
+	padding: 1.5rem 2rem;
+}
+
+.main-footer__link:link,
+.main-footer__link:visited {
+	color: inherit;
+	text-decoration: underline;
+	transition: 300ms all ease-in;
+}
+
+.main-footer__link:hover,
+.main-footer__link:active {
+	color: var(--primary-color);
+	text-decoration: none;
+}
+/*end-style:: Footer */

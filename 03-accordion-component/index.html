@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ++++++++++++++++++   Adding meta tags  ++++++++++++++++++ -->
+
+    <!-- Set the encoding of the style sheet to Specifies the character encoding for the HTML document -->
+    <meta charset="UTF-8" />
+
+    <!-- Setting the viewport to make your website look good on all devices -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Setting the viewport to make your website look good on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Setting a suggest color that browsers should display of the page or of the surrounding user interface. -->
+    <meta name="theme-color" content="#F0DB4F" />
+
+    <!-- defines the document's title that is shown in a browser's title bar or a page's tab -->
+    <title>Accordion &mdash; Component</title>
+
+    <!-- Short description of the document's subject (limit to 150 characters) -->
+    <!-- This content *may* be used as a part of search engine results. -->
+    <meta
+      name="description"
+      content="Accordion Component used to practice JS."
+    />
+
+    <!-- Set keywords words relevant to the page's content be used as a part of search engine results -->
+    <meta
+      name="keywords"
+      content="Accordion Component, JS, practicle js application"
+    />
+
+    <!-- Set the name of the document's author. -->
+    <meta name="author" content="Amr Saad Abdallah" />
+
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <!-- start-link:: -->
+    <!-- ++++++++++++++++++   Adding  fav-icons  ++++++++++++++++++ -->
+    <link rel="icon" href="assets/images/favicon/favicon.png" />
+    <link
+      rel="apple-touch-icon"
+      href="assets/images/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <!-- ++++++++++++    Adding Rubik fonts from google fonts  +++++++++++++ -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <!-- +++++++++++++    Adding custome styles sheet  ++++++++++++++ -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <!-- ++++++++++++++++++    Adding Author Info  ++++++++++++++++++ -->
+    <!-- Links to information about the author(s) of the document -->
+    <link rel="author" href="author.txt" />
+
+    <!-- Provides information about an author -->
+    <link rel="me" href="mailto:amrsaadabdallah@gmail.com" />
+    <link rel="me" href="sms:+201097756067" />
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    <!-- end-link:: -->
+  </head>
+  <!-- start-body:: -->
+  <body dir="ltr">
+    <!-- start-Block:: Header-->
+    <header class="main-header">
+      <h1 class="main-header__title">Accordion Component</h1>
+    </header>
+    <!-- end-Block:: Header -->
+
+    <!-- start-Block:: Main-->
+    <main>
+      <div class="container">
+        <h2 class="secondary__title">Frequently Questions & Answers</h2>
+
+        <div class="accordion">
+          <div class="accordion__item accordion__item-1">
+            <h3 class="accordion__header" id="headingOne">
+              <button
+                class="accordion__button"
+                type="button"
+                aria-expanded="true"
+                aria-controls="contentOne"
+                data-accordion-item=".accordion__item-1"
+              >
+                <span class="accordion__number">01</span>
+                Where are these chairs assembled?
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="accordion__icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
+            </h3>
+            <div
+              id="contentOne"
+              class="accordion__content"
+              aria-labelledby="headingOne"
+            >
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Accusantium dolor at sequi obcaecati cupiditate. Voluptates
+                repellendus cupiditate aperiam! Incidunt amet quo neque.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion__item accordion__item-2">
+            <h3 class="accordion__header" id="headingTwo">
+              <button
+                class="accordion__button"
+                type="button"
+                aria-expanded="true"
+                aria-controls="contentTwo"
+                data-accordion-item=".accordion__item-2"
+              >
+                <span class="accordion__number">02</span>
+                What's the best seller Chair do you have?
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="accordion__icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
+            </h3>
+            <div
+              id="contentTwo"
+              class="accordion__content"
+              aria-labelledby="headingTwo"
+            >
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
+                nobis molestiae fugiat ad iure quod ipsa ipsum nostrum incidunt
+                eaque? Eum iusto tempora nam esse ea, perspiciatis deleniti
+                alias odit.
+              </p>
+
+              <ul class="accordion__content__List">
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion__item accordion__item-3">
+            <h3 class="accordion__header" id="headingThree">
+              <button
+                class="accordion__button"
+                type="button"
+                aria-expanded="true"
+                aria-controls="contentThree"
+                data-accordion-item=".accordion__item-3"
+              >
+                <span class="accordion__number">03</span>
+                How long do I have to return my chair?
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="accordion__icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
+            </h3>
+            <div
+              id="contentThree"
+              class="accordion__content"
+              aria-labelledby="headingThree"
+            >
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Accusantium dolor at sequi obcaecati cupiditate. Voluptates
+                repellendus cupiditate aperiam! Incidunt amet quo neque.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- end-Block:: Main -->
+
+    <!-- start-Block:: Footer -->
+    <footer class="main-footer">
+      <p>
+        <span class="current-year">2021</span> ©
+        <a
+          class="main-footer__link"
+          href="https://amrsaadabdallah.github.io"
+          target="_blank"
+          >AMR SAAD ABDALLAH</a
+        >
+      </p>
+    </footer>
+    <!-- end-Block::Footer -->
+
+    <!-- start-script:: -->
+    <script src="assets/js/main.js"></script>
+    <!-- end-script:: -->
+  </body>
+  <!-- end-body:: -->
+</html>
