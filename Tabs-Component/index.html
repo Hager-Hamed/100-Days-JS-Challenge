@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ++++++++++++++++++   Adding meta tags  ++++++++++++++++++ -->
+
+    <!-- Set the encoding of the style sheet to Specifies the character encoding for the HTML document -->
+    <meta charset="UTF-8" />
+
+    <!-- Setting the viewport to make your website look good on all devices -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Setting the viewport to make your website look good on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Setting a suggest color that browsers should display of the page or of the surrounding user interface. -->
+    <meta name="theme-color" content="#F0DB4F" />
+
+    <!-- defines the document's title that is shown in a browser's title bar or a page's tab -->
+    <title>Tabs &mdash; Component</title>
+
+    <!-- Short description of the document's subject (limit to 150 characters) -->
+    <!-- This content *may* be used as a part of search engine results. -->
+    <meta name="description" content="Tabs Component used to practice JS." />
+
+    <!-- Set keywords words relevant to the page's content be used as a part of search engine results -->
+    <meta
+      name="keywords"
+      content="Tabs Component, JS, practicle js application"
+    />
+
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <!-- start-link:: -->
+    <!-- ++++++++++++++++++   Adding  fav-icons  ++++++++++++++++++ -->
+    <link rel="icon" href="assets/images/favicon/favicon.png" />
+    <link
+      rel="apple-touch-icon"
+      href="assets/images/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <!-- ++++++++++++    Adding Rubik fonts from google fonts  +++++++++++++ -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <!-- +++++++++++++    Adding custome styles sheet  ++++++++++++++ -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <!-- end-link:: -->
+  </head>
+  <!-- start-body:: -->
+  <body dir="ltr">
+    <!-- start-Block:: Header-->
+    <header class="main-header">
+      <h1 class="main-header__title">Tabs Component</h1>
+    </header>
+    <!-- end-Block:: Header -->
+
+    <!-- start-Block:: Main-->
+    <main>
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title">The 3 main Frontend Languages</h2>
+
+          <div class="tabs">
+            <ul class="tabs__control__list">
+              <li class="tabs__control__item tabs__control__item-1">
+                <button
+                  class="tabs__control__btn tabs__control__btn-1 active"
+                  type="button"
+                  data-tab-content=".tabs__content__item-1"
+                >
+                  HTML
+                </button>
+              </li>
+              <li class="tabs__control__item tabs__control__item-2">
+                <button
+                  class="tabs__control__btn tabs__control__btn-2"
+                  type="button"
+                  data-tab-content=".tabs__content__item-2"
+                >
+                  CSS
+                </button>
+              </li>
+              <li class="tabs__control__item tabs__control__item-3">
+                <button
+                  class="tabs__control__btn tabs__control__btn-3"
+                  type="button"
+                  data-tab-content=".tabs__content__item-3"
+                >
+                  JS
+                </button>
+              </li>
+            </ul>
+
+            <ul class="tabs__content__list">
+              <li class="tabs__content__item tabs__content__item-1 active">
+                <div class="tabs__content__item__img-container">
+                  <img
+                    class="tabs__content__item__img"
+                    src="assets/images/logos/html-logo.png"
+                    alt="HTML logo"
+                  />
+                </div>
+                <div class="tabs__content__text-container">
+                  <h3 class="tabs__content__item__title">
+                    HTML :: Hypertext Markup Language
+                  </h3>
+                  <p class="tabs__content__item__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Placeat enim pariatur perspiciatis labore aliquid tempore
+                    asperiores laudantium iusto atque aliquam veritatis eveniet
+                    officia, neque temporibus excepturi. Impedit id adipisci
+                    natus inventore, a facere accusantium soluta. Perspiciatis
+                    similique consequuntur iusto obcaecati recusandae ea beatae
+                    ex libero officiis labore odit, assumenda dolorum?
+                  </p>
+                </div>
+              </li>
+              <li class="tabs__content__item tabs__content__item-2">
+                <div class="tabs__content__item__img-container">
+                  <img
+                    class="tabs__content__item__img"
+                    src="assets/images/logos/css-logo.png"
+                    alt="HTML logo"
+                  />
+                </div>
+                <div class="tabs__content__text-container">
+                  <h3 class="tabs__content__item__title">
+                    CSS :: Cascade Style Sheet
+                  </h3>
+                  <p class="tabs__content__item__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Placeat enim pariatur perspiciatis labore aliquid tempore
+                    asperiores laudantium iusto atque aliquam veritatis eveniet
+                    officia, neque temporibus excepturi. Impedit id adipisci
+                    natus inventore, a facere accusantium soluta. Perspiciatis
+                    similique consequuntur iusto obcaecati recusandae ea beatae
+                    ex libero officiis labore odit, assumenda dolorum?
+                  </p>
+                </div>
+              </li>
+              <li class="tabs__content__item tabs__content__item-3">
+                <div class="tabs__content__item__img-container">
+                  <img
+                    class="tabs__content__item__img"
+                    src="assets/images/logos/js-logo.png"
+                    alt="JS logo"
+                  />
+                </div>
+                <div class="tabs__content__text-container">
+                  <h3 class="tabs__content__item__title">JS :: JavaScript</h3>
+                  <p class="tabs__content__item__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Placeat enim pariatur perspiciatis labore aliquid tempore
+                    asperiores laudantium iusto atque aliquam veritatis eveniet
+                    officia, neque temporibus excepturi. Impedit id adipisci
+                    natus inventore, a facere accusantium soluta. Perspiciatis
+                    similique consequuntur iusto obcaecati recusandae ea beatae
+                    ex libero officiis labore odit, assumenda dolorum?
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- end-Block:: Main -->
+
+    <!-- start-Block:: Footer -->
+    <footer class="main-footer">
+      <p>
+        <span class="current-year">2024</span> ©
+        <a class="main-footer__link" href="#" target="_blank">Hager Hamed</a>
+      </p>
+    </footer>
+    <!-- end-Block::Footer -->
+
+    <!-- start-script:: -->
+    <script src="assets/js/finish.js"></script>
+    <!-- end-script:: -->
+  </body>
+  <!-- end-body:: -->
+</html>

@@ -1,0 +1,170 @@
+:root {
+  --main-color: #555;
+  --primary-color: #ff4b00;
+  --secondary-color: #2196f3;
+  --tertiary-color: #ffc107;
+}
+
+html {
+  height: 100%;
+  /* this defines what 1rem is 10px in xl & xxl media */
+  font-size: 62.5%; /* 1rem = 10px -->  10/16 *100% = 62.5% */
+}
+
+body {
+  font-size: 1.6rem;
+  min-height: 100%;
+  font-family: Inter, sans-serif;
+  color: #343a49;
+  background-color: lavender;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ccc;
+}
+
+main {
+  padding: 50px 0;
+  margin-bottom: auto;
+}
+
+.main-header__title {
+  margin: 50px auto 0;
+  padding: 0.5rem 2rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #333;
+  width: fit-content;
+  background-color: var(--main-color);
+  color: White;
+  border: 1px solid #666;
+  border-radius: 10px;
+}
+
+.section__title {
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.container {
+  padding: 0 10vw;
+}
+
+/* start-style:: Tabs Style component */
+
+.tabs {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  padding: 2rem;
+}
+
+.tabs__control__list {
+  display: flex;
+}
+.tabs__control__item {
+  flex: 1 1 0%;
+}
+.tabs__control__btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  border: 2px solid var(--main-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.tabs__control__btn:hover,
+.tabs__control__btn.active {
+  color: #fff;
+}
+
+.tabs__control__btn-1:hover,
+.tabs__control__btn-1.active {
+  background-color: var(--primary-color);
+  /* border-color: var(--primary-color); */
+}
+.tabs__control__btn-2:hover,
+.tabs__control__btn-2.active {
+  background-color: var(--secondary-color);
+  /* border-color: var(--secondary-color); */
+}
+.tabs__control__btn-3:hover,
+.tabs__control__btn-3.active {
+  background-color: var(--tertiary-color);
+  /* border-color: var(--tertiary-color); */
+}
+
+/* .tabs__content__list {
+} */
+.tabs__content__item {
+  border: 2px solid var(--main-color);
+  border-radius: 0.5rem;
+
+  border-top-width: 0;
+  padding: 2rem;
+
+  display: none;
+  /* display: flex; */
+  align-items: start;
+  gap: 1.5rem;
+}
+
+.tabs__content__item.active {
+  display: flex;
+}
+
+.tabs__content__item__img-container {
+  flex-shrink: 0;
+}
+.tabs__content__item__img {
+  display: block;
+  width: 10rem;
+}
+
+.tabs__content__item__title {
+  padding-bottom: 0.5rem;
+}
+
+.tabs__content__item-1 .tabs__content__item__title {
+  color: var(--primary-color);
+}
+.tabs__content__item-2 .tabs__content__item__title {
+  color: var(--secondary-color);
+}
+.tabs__content__item-3 .tabs__content__item__title {
+  color: var(--tertiary-color);
+}
+
+.tabs__content__item__text {
+  color: #444;
+}
+/* end-style:: Tabs Style component */
+
+/* start-style:: footer Style */
+.main-footer {
+  background-color: #333;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 1.5rem 2rem;
+}
+
+.main-footer__link:link,
+.main-footer__link:visited {
+  color: inherit;
+  text-decoration: underline;
+  transition: 300ms all ease-in;
+}
+
+.main-footer__link:hover,
+.main-footer__link:active {
+  color: #aaa;
+  text-decoration: none;
+}
+/* end-style:: accordion Style component */

@@ -1,0 +1,246 @@
+/* poppins fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap");
+
+:root {
+  --main-font: "Gilda Display", serif;
+  --white-color: #f8f8f7;
+  --para-color: #808080;
+  --dark-color: #000;
+  --main-color: #ffca40;
+  --danger-color: #cb161d;
+}
+
+/* Start global  */
+* {
+  font-family: var(--main-font);
+  margin: 0;
+  /* background-color: #fff; */
+}
+a {
+  text-decoration: none;
+  transition: 0.2s;
+}
+a:not(.main-btn, .navbar-brand, .nothov):hover {
+  background-color: var(--main-color) !important;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+.m-0 {
+  margin: 0;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--dark-color);
+}
+p {
+  color: var(--dark-color);
+  font-weight: var(--fw-light);
+  font-size: 16px;
+}
+/* Start Sidebar */
+.page {
+  /* background-color: #d4d6d8; */
+  min-height: 100vh;
+}
+
+.mancont {
+  background-color: #f1f5f9;
+  width: 80%;
+  margin: auto;
+}
+
+.sidebar {
+  width: 20%;
+  box-shadow: 0 0 10px #ddd;
+}
+.sidebar > h3 {
+  margin-bottom: 50px;
+}
+.sidebar ul li a {
+  color: #dc3545;
+  transition: 0.3s;
+  margin-bottom: 5px;
+}
+
+.sidebar ul li a span {
+  font-size: 17px;
+  font-weight: 600;
+  margin-left: 10px;
+  color: var(--dark-color);
+}
+@media (max-width: 767px) {
+  .sidebar {
+    width: 58px;
+    padding: 10px;
+  }
+  .sidebar > h3 {
+    font-size: 10px;
+    margin-bottom: 15px;
+  }
+  .sidebar > h3::before,
+  .sidebar > h3::after {
+    display: none;
+  }
+  .sidebar ul li a span {
+    display: none;
+  }
+}
+/* End Sidebar */
+
+/* Start Content */
+.content {
+  overflow: hidden;
+}
+.head {
+  padding: 7px 32px;
+  width: 69rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.right {
+  margin-top: 1rem;
+}
+
+/* .right a {
+  color: var(--para-color);
+} */
+
+.lft {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+/* .lft .search::before {
+  content: "\f002";
+  font-weight: 900;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: var(--para-color);
+} */
+.lft .search input {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-left: 5px;
+  padding-left: 30px;
+  width: 160px;
+  transition: width 0.3s;
+}
+.lft .search input:focus {
+  width: 200px;
+}
+
+.lft .search input:focus::placeholder {
+  opacity: 0;
+}
+
+.h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Start Latest News */
+.latest-news .news-row:not(:last-of-type) {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+.latest-news .news-row img {
+  width: 100px;
+  border-radius: 6px;
+  margin-right: 15px;
+}
+.latest-news .info {
+  flex-grow: 1;
+}
+.latest-news .info h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+@media (max-width: 767px) {
+  .latest-news .news-row {
+    display: block;
+  }
+  .latest-news .news-row .label {
+    margin: 10px auto;
+    width: fit-content;
+  }
+}
+/* End Latest News */
+/* Start Tasks */
+.tasks .task-row:not(:last-of-type) {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+.tasks .info {
+  flex-grow: 1;
+}
+.tasks .done {
+  opacity: 0.3;
+}
+.tasks .done h3,
+.tasks .done p {
+  text-decoration: line-through;
+}
+.tasks .delete {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tasks .delete:hover {
+  color: var(--red-color);
+}
+
+.wrapper {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .wrapper {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+
+/* ============= */
+
+.page h1 {
+  margin: 20px 20px 40px;
+}
+
+.Dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nothov {
+  color: var(--para-color);
+}
+
+.nothov:hover {
+  border-bottom: 5px solid var(--main-color);
+}

@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+  background: #060a1f;
+}
+.clock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 50vh;
+  width: 60vw;
+}
+
+/* digital clock styling */
+
+.clock-digi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.clock-digi #time-12 {
+  display: flex;
+}
+.clock-digi #time-12 div {
+  position: relative;
+  margin: 0 5px;
+  -webkit-box-reflect: below 5px
+    linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+}
+.clock-digi #time-12 div span {
+  position: relative;
+  width: 100px;
+  height: 80px;
+  background: #2196f3;
+  color: #fff;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  z-index: 10;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+.clock-digi #time-12 div span:nth-child(2) {
+  height: 30px;
+  font-size: 0.7em;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  z-index: 9;
+  background: #127fd6;
+  text-transform: uppercase;
+}
+.clock-digi #time-12 div:nth-child(3) span {
+  background: #ff006a;
+}
+.clock-digi #time-12 div:nth-child(3) span:nth-child(2) {
+  background: #d10057;
+}
+.clock-digi #time-12 div:nth-child(4) span {
+  background: #ffffdd;
+  color: #000;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 60px;
+  -webkit-box-reflect: below 5px
+    linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+}
+.hide {
+  display: none;
+}
+.btn {
+  width: 40px;
+  height: 40px;
+  font-size: 1.5em;
+  border: none;
+  outline: none;
+  background: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+  margin-left: 500px;
+  margin-top: -150px;
+  border: 2px solid #ff006a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.btn img {
+  height: 1em;
+  width: 1em;
+}
+.btn:hover {
+  box-shadow: -2px 2px 7px #ff006a, 2px 2px 7px #ff006a, -2px -2px 7px #ff006a,
+    2px -2px 7px #ff006a;
+}
+.hide {
+  display: none;
+}
+
+/* analog clock styling */
+
+.clock-analog {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./clock.png);
+  background-size: contain;
+  border: 4px solid #00aaff;
+  border-radius: 50%;
+  -webkit-box-reflect: below 5px
+    linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+}
+.clock-analog:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 4;
+}
+.clock-analog .hou,
+.clock-analog .min,
+.clock-analog .sec {
+  position: absolute;
+}
+.clock-analog .hou,
+.hr {
+  height: 100px;
+  width: 100px;
+}
+.clock-analog .min,
+.mn {
+  height: 120px;
+  width: 120px;
+}
+.clock-analog .sec,
+.sc {
+  height: 140px;
+  width: 140px;
+}
+.hr,
+.mn,
+.sc {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+}
+.hr:before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 50px;
+  background: #ff105e;
+  z-index: 1;
+  border-radius: 6px 6px 0 0;
+}
+.mn:before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 60px;
+  background: #fff;
+  z-index: 2;
+  border-radius: 6px 6px 0 0;
+}
+.sc:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 90px;
+  background: #fff;
+  z-index: 3;
+  border-radius: 6px 6px 0 0;
+}
+
+/* Digital to analog button style  */
+
+.change {
+  width: 125px;
+  height: 50px;
+  border-radius: 50px;
+  border: 2px solid #ff006a;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+  background: #060a1f;
+  transition: all 0.3s ease;
+  z-index: 6;
+}
+.change:hover {
+  box-shadow: -2px 2px 7px #ff006a, 2px 2px 7px #ff006a, -2px -2px 7px #ff006a,
+    2px -2px 7px #ff006a;
+}
+
+/* responsive media queary */
+
+@media (max-width: 550px) {
+  .clock-digi #time-12 div {
+    margin: 0 3px;
+  }
+  .clock-digi #time-12 div span {
+    height: 50px;
+    width: 60px;
+    font-size: 1.5em;
+  }
+  .clock-digi #time-12 div span:nth-child(2) {
+    height: 20px;
+    font-size: 0.5em;
+  }
+  .clock-digi #time-12 div:nth-child(4) span {
+    height: 40px;
+    width: 40px;
+    font-size: 1em;
+    margin-top: 30px;
+  }
+  .btn {
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 250px;
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+  }
+}

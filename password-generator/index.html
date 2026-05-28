@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <!-- ++++++++++++++++++   Adding meta tags  ++++++++++++++++++ -->
+
+    <!-- Set the encoding of the style sheet to Specifies the character encoding for the HTML document -->
+    <meta charset="UTF-8" />
+
+    <!-- Setting the viewport to make your website look good on all devices -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Setting the viewport to make your website look good on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Setting a suggest color that browsers should display of the page or of the surrounding user interface. -->
+    <meta name="theme-color" content="#F0DB4F" />
+
+    <!-- defines the document's title that is shown in a browser's title bar or a page's tab -->
+    <title>🔑 password generator</title>
+
+    <!-- Short description of the document's subject (limit to 150 characters) -->
+    <!-- This content *may* be used as a part of search engine results. -->
+    <meta
+      name="description"
+      content=" Weight Converter App used to practice JS."
+    />
+
+    <!-- Set keywords words relevant to the page's content be used as a part of search engine results -->
+    <meta
+      name="keywords"
+      content=" Weight Converter, JS, practicle js application"
+    />
+
+    <!-- Set the name of the document's author. -->
+    <meta name="author" content="Amr Saad Abdallah" />
+
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <!-- start-link:: -->
+    <!-- ++++++++++++++++++   Adding  fav-icons  ++++++++++++++++++ -->
+    <link rel="icon" href="assets/images/favicon/favicon.png" />
+    <link
+      rel="apple-touch-icon"
+      href="assets/images/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="./assets/images/favicon/manifest.webmanifest" />
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <!-- ++++++++++++    Adding Figtree fonts from google fonts  +++++++++++++ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/> -->
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <!-- +++++++++++++    Adding custome styles sheet  ++++++++++++++ -->
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    /> -->
+
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    <!-- end-link:: -->
+  </head>
+  <!-- start-body:: -->
+  <body
+    dir="ltr"
+    class="min-vh-100 d-flex flex-column"
+    style="font-family: 'Figtree', sans-serif"
+  >
+    <!-- start-Block:: Header-->
+    <header class="bg-primary bg-opacity-75 py-3 text-center">
+      <h1
+        class="text-warning text-capitalize text-opacity-70 display-2 fw-medium m-0"
+      >
+        🔑 password generator
+      </h1>
+    </header>
+    <!-- end-Block:: Header -->
+
+    <!-- start-Block:: Main-->
+    <main class="flex-grow-1 bg-light p-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-6">
+            <h2 class="mb-4 text-center text-muted">
+              Let's generate your code by determine it's lenght & combined
+              characters:
+            </h2>
+
+            <form class="row g-3 password-generator-form">
+              <div class="input-group">
+                <input
+                  type="text"
+                  name="password"
+                  class="form-control"
+                  placeholder="Let's Generate password"
+                  aria-label="Generated Password"
+                  aria-describedby="basic-addon2"
+                  readonly
+                />
+                <div class="input-group-text p-0">
+                  <button type="button" class="btn btn-clipboard">
+                    <i class="bi bi-clipboard"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="row g-3 align-items-center">
+                <div class="col">
+                  <label
+                    for="passwordLength"
+                    class="col-form-label text-capitalize"
+                    >password length</label
+                  >
+                </div>
+                <div class="col">
+                  <input
+                    type="number"
+                    name="passwordLength"
+                    id="passwordLength"
+                    class="form-control"
+                    value="10"
+                    min="4"
+                    max="30"
+                    aria-labelledby="passwordHelpInline"
+                  />
+                </div>
+                <div class="col-auto">
+                  <span id="passwordHelpInline" class="form-text">
+                    Must be numbers min:4-> max:30.
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="form-check">
+                  <input
+                    name="passwordType"
+                    class="form-check-input"
+                    type="checkbox"
+                    value="uppercase"
+                    id="uppercase"
+                  />
+                  <label
+                    class="form-check-label text-capitalize"
+                    for="uppercase"
+                  >
+                    uppercase
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="form-check">
+                  <input
+                    name="passwordType"
+                    class="form-check-input"
+                    type="checkbox"
+                    value="lowercase"
+                    id="lowercase"
+                  />
+                  <label
+                    class="form-check-label text-capitalize"
+                    for="lowercase"
+                  >
+                    lowercase
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-check">
+                  <input
+                    name="passwordType"
+                    class="form-check-input"
+                    type="checkbox"
+                    value="numbers"
+                    id="numbers"
+                  />
+                  <label class="form-check-label text-capitalize" for="numbers">
+                    numbers
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="form-check">
+                  <input
+                    name="passwordType"
+                    class="form-check-input"
+                    type="checkbox"
+                    value="symbols"
+                    id="symbols"
+                  />
+                  <label class="form-check-label text-capitalize" for="symbols">
+                    symbols
+                  </label>
+                </div>
+              </div>
+
+              <button type="submit" class="mt-5 btn btn-primary text-uppercase">
+                generate password
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- end-Block:: Main -->
+
+    <!-- start-Block:: Footer -->
+    <footer class="bg-dark text-light py-3">
+      <p class="mb-0 text-center">
+        <span class="current-year">2021</span> ©
+        <a
+          class="text-reset"
+          href="https://amrsaadabdallah.github.io"
+          target="_blank"
+          >AMR SAAD ABDALLAH</a
+        >
+      </p>
+    </footer>
+    <!-- end-Block::Footer -->
+
+    <!-- start-script:: -->
+    <script src="assets/js/main.js"></script>
+    <!-- end-script:: -->
+  </body>
+  <!-- end-body:: -->
+</html>

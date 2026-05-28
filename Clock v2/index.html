@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fontawesome.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Clock</title>
+</head>
+<body>
+    <div class="clock">
+        <div class="digi-con">
+            <div class="clock-digi">
+                <div class="clock12">
+                    <div id="time-12">
+                        <div><span id="hour">00</span><span>Hours</span></div>
+                        <div><span id="minutes">00</span><span>Minutes</span></div>
+                        <div><span id="seconds">00</span><span>Seconds</span></div>
+                        <div class="ampm-div"><span id="ampm" >AM</span></div>
+                    </div>
+                </div>
+                <div class="clock24 hide">
+                    <div id="time-12"  >
+                        <div><span id="hour-24">00</span><span>Hours</span></div>
+                        <div><span id="minutes-24">00</span><span>Minutes</span></div>
+                        <div><span id="seconds-24">00</span><span>Seconds</span></div>
+                    </div>
+                </div>
+                <button class="btn"><img src="change-clock.svg"></button>
+            </div>
+        </div>
+        <div class="analog-con hide">
+            <div class="clock-analog">
+                <div class="hou">
+                    <div class="hr" id="hr"></div>
+                </div>
+                <div class="min">
+                    <div class="mn" id="mn"></div>
+                </div>
+                <div class="sec">
+                    <div class="sc" id="sc"></div>
+                </div>
+            </div>
+        </div>
+        <button class="change">Change</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

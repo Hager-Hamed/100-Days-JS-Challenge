@@ -1,0 +1,111 @@
+html {
+	height: 100%;
+	/* this defines what 1rem is 10px  */
+	font-size: 62.5%; /* 1rem = 10px -->  10/16 *100% = 62.5% */
+}
+
+body {
+	font-size: 1.6rem;
+	min-height: 100%;
+	font-family: Inter, sans-serif;
+	color: rgba(26, 26, 26);
+	background-color: #f2f1ed;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+main {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding: 50px 0;
+	margin-bottom: auto;
+}
+
+.main-header__title {
+	margin: 30px auto 0;
+	padding: 0.5rem 2rem;
+	font-size: 3rem;
+	font-weight: 600;
+	width: fit-content;
+	text-decoration: underline wavy #333;
+}
+
+.row {
+	display: flex;
+	gap: 2vw;
+	justify-content: center;
+}
+
+/* start-style:: Countdown Timer Style */
+
+.timer-message {
+	color: green;
+	text-align: center;
+	font-style: italic;
+	font-size: 2rem;
+	margin-bottom: 4rem;
+}
+
+.timer-message.error {
+	color: red;
+}
+
+.figure {
+	text-align: center;
+}
+.figure__title {
+	font-size: 2.2vw;
+	text-transform: uppercase;
+	margin-bottom: 2rem;
+}
+.figure__number {
+	font-size: 8vw;
+	padding: 1vw;
+	display: block;
+	min-width: 12vw;
+	background-color: rgba(247, 247, 247);
+	box-shadow: 0 0 2px 2px #555;
+	border-radius: 10px;
+}
+
+.seperator {
+	display: flex;
+	align-items: center;
+	font-size: 7vw;
+	margin-top: 3.5vw;
+}
+
+/* end-style:: accordion Style component */
+
+/* start-style:: footer Style */
+.main-footer {
+	background-color: #333;
+	color: #f1f1f1;
+	text-align: center;
+	padding: 1.5rem 2rem;
+}
+
+.main-footer__link:link,
+.main-footer__link:visited {
+	color: inherit;
+	text-decoration: underline;
+	transition: 300ms all ease-in;
+}
+
+.main-footer__link:hover,
+.main-footer__link:active {
+	color: #aaa;
+	text-decoration: none;
+}
+/* end-style:: accordion Style component */
+
+.my-btn {
+	padding: 20px 40px;
+	background-color: lightblue;
+	border-radius: 5px;
+	border: 2px solid #333;
+}

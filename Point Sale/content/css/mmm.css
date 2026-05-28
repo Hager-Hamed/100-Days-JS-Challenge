@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+/* variables  */
+:root {
+  --font-family: "Dancing Script";
+  --main-color: #ffbe33;
+  --sub-color: #222831;
+  --third-color: #e69c00;
+  --white-color: #fff;
+  --gray-color: #f1f2f3;
+  --main-transition: all 0.3s linear;
+  --top-main-padding: 100px;
+  --bottom-main-padding: 100px;
+}
+/* start global style  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--white-color);
+}
+a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+ul {
+  list-style: none;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.center-y {
+  display: flex;
+  align-items: center;
+}
+.font-f {
+  font-family: var(--font-family);
+  font-weight: bold;
+}
+.main-btn {
+  display: inline-block;
+  text-transform: capitalize;
+  background-color: var(--main-color);
+  padding: 10px 30px;
+  border-radius: 25px;
+  transition: var(--main-transition);
+}
+.main-btn:hover {
+  background-color: var(--third-color);
+}
+.main-title {
+  font-family: var(--font-family);
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  color: #0c0c0c;
+}
+.main-cards-container {
+  display: flex;
+  gap: 30px;
+}
+.main-card {
+  gap: 20px;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 8px;
+}
+.main-card .card-img {
+  max-width: 180px;
+  max-height: 180px;
+  overflow: hidden;
+  border: 5px solid var(--third-color);
+  border-radius: 50%;
+}
+img {
+  max-width: 100%;
+  transition: var(--main-transition);
+}
+/* end global style  */
+/* start menu style  */
+.menu {
+  padding-bottom: var(--bottom-main-padding);
+  padding-top: var(--top-main-padding);
+}
+.menu .menu-filter {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.menu .menu-filter .main-btn {
+  padding: 7px 25px;
+}
+.menu .menu-filter .main-btn:not(.active) {
+  background: none;
+  color: #0c0c0c;
+}
+.menu .menu-filter .main-btn.active {
+  background-color: var(--sub-color);
+}
+.menu .menu-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+.menu .menu-content .menu-box {
+  border-radius: 15px;
+  transition: var(--main-transition);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.menu .menu-content .menu-box::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80%;
+  background-color: var(--sub-color);
+}
+.menu .menu-content .menu-box .box-img {
+  text-align: center;
+  padding: 25px;
+  background-color: var(--gray-color);
+  border-radius: 0 0 0 45px;
+}
+.menu .menu-content .menu-box .box-img img {
+  height: 150px;
+}
+.menu .menu-content .menu-box:hover img {
+  transform: scale(1.1);
+}
+.menu .menu-content .menu-box .box-info {
+  padding: 25px;
+  color: var(--white-color);
+}
+.menu .menu-content .menu-box .box-info h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+.menu .menu-content .menu-box .box-info .options {
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+.menu .menu-content .menu-box .box-info .options .main-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+.menu .menu-content .menu-box .box-info .options h6 {
+  font-size: inherit;
+}
+.menu .container > .main-btn {
+  padding: 10px 50px;
+  display: block;
+  width: fit-content;
+  margin: 3rem auto 0;
+}
+/* js classes */
+.disabled {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transform: scale(0.2);
+  -webkit-transform: scale(0.2);
+}
+.chosen {
+  opacity: 1;
+  z-index: initial;
+  visibility: visible;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+}
+/* end menu style  */
+@media (max-width: 375px) {
+  .menu .menu-content {
+    grid-template-columns: repeat(auto-fill, minmax(220px, auto));
+  }
+}
